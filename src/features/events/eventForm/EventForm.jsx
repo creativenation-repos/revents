@@ -13,6 +13,7 @@ export default function EventForm({setFormOpen, setEvents, createEvent, selected
         date: '',
 
     }
+    
     const [values, setValues] = useState(initialValues);
 
     function handleFormSubmit() {

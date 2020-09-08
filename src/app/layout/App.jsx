@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 import EventDashboard from '../../features/events/eventDashboard/EventDashboard';
 import NavBar from '../../features/nav/NavBar';
 import { Container } from 'semantic-ui-react';
@@ -21,7 +21,11 @@ export default function App() {
     <>
       <NavBar setFormOpen={handleCreateFormOpen} />
       <Container className='main'>
-        <EventDashboard setFormOpen={setFormOpen} formOpen={formOpen} selectEvent={handleSelectEvent} selectedEvent={selectedEvent} />
+        <EventDashboard 
+          setFormOpen={setFormOpen} 
+          formOpen={formOpen} 
+          selectEvent={handleSelectEvent} 
+          selectedEvent={selectedEvent} />
       </Container>
     </>
   );
