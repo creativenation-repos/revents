@@ -8,20 +8,17 @@ import EventDetailedPage from '../../features/events/eventDetailed/EventDetailed
 import EventForm from '../../features/events/eventForm/EventForm';
 
 export default function App() {
-
-
   return (
     <>
     <Route exact path='/' component={HomePage} />
     <Route path={'/(.+)'} render={() => (
         <>
-        <NavBar />
-        <Container className='main'>
-          
-          <Route exact path='/events' component={EventDashboard} />
-          <Route path='/events/:id' component={EventDetailedPage} />
-          <Route path={['/createEvent', '/manage/:id']} component={EventForm} />
-        </Container>
+          <NavBar />
+          <Container className='main'>
+            <Route exact path='/events' component={EventDashboard} />
+            <Route path='/events/:id' component={EventDetailedPage} />
+            <Route path={['/createEvent', '/manage/:id']} component={EventForm} />
+          </Container>
         </>
     )} />
       

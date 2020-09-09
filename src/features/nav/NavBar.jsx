@@ -1,12 +1,12 @@
 import { Menu, Container, Button } from "semantic-ui-react";
-
 import React, {useState} from 'react';
 import { NavLink, useHistory } from "react-router-dom";
 import SignedOutMenu from "./SignedOutMenu";
 import SignedInMenu from "./SignedInMenu";
 
 
-export default function NavBar({setFormOpen}) {
+export default function NavBar() {
+
     const history = useHistory();
     const [authenticated, setAuthenticated] = useState(false);
 
@@ -14,6 +14,7 @@ export default function NavBar({setFormOpen}) {
         setAuthenticated(false);
         history.push('/');
     }
+    
     return (
         <Menu inverted fixed='top'>
             <Container>
